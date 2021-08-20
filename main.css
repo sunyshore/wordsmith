@@ -1,0 +1,17 @@
+body {
+    background-color: white;
+    margin: 10px;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  a:link, a:visited {
+    color: orange;
+  }
+  
+  a:hover, a:active {
+    color: crimson;
+  }
+  
