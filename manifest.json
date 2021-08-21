@@ -7,4 +7,13 @@
 "browser_action": {"default_icon": "./assets/images/tab-icon.png", "default_title": "Have a good day", "default_popup": "popup.html"},
 "chrome_url_overrides" : {"newtab": "newtab.html"},
 "background": {"persistent": false, "scripts": ["./assets/js/background.js"]},
-"permissions": ["activeTab", "storage", "contextMenus"]}
+"permissions": ["activeTab", "storage", "contextMenus"],
+
+"action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+    "48": "/assets/icons/48.png",
+    "128": "/assets/icons/128.png"
+    }
+  }
+}
