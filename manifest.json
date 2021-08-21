@@ -4,7 +4,7 @@
 "version": "1",
 "author": "merps",
 
-"browser_action": {"default_icon": "tab-icon.png", "default_title": "Have a good day", "default_popup": "popup.html"},
+"browser_action": {"default_icon": "./assets/images/tab-icon.png", "default_title": "Have a good day", "default_popup": "popup.html"},
 "chrome_url_overrides" : {"newtab": "newtab.html"},
-"background": {"scripts": "", "persistent": false, "service_worker" : "./assets/js/background.js"},
-"permissions": ["activeTab", "storage"]}
+"background": {"persistent": false, "scripts": ["./assets/js/background.js"]},
+"permissions": ["activeTab", "storage", "contextMenus"]}
