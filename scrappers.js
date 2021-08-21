@@ -21,3 +21,5 @@ async function scrapeProduct(url) {
 
 word = "Hello";
 scrapeProduct('https://www.thesaurus.com/browse/' + word);
+
+
