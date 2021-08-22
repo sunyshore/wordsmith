@@ -1,18 +1,28 @@
-function getword(info, tab) {
-    fetch('http://wordsmith.qc24.xyz/?word=death') // ask lukas how this works
-        .then(response => response.json())
-        .then(data => console.log(data));
-    console.log("Word " + info.selectionText + " was clicked.");
-    chrome.tabs.create({  // shouldn't make a new tab
-        url: "http://wordsmith.qc24.xyz/?word=" + info.selectionText
-    });
+const CONTEXT_MENU_ID = "wordsmith-contextmenu"
+
+function getData(word) {
+    // Fetch from fastapi.
+    fetch(`https://shaped-entropy-323617.rj.r.appspot.com/?word=${word}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            // Send the data from the api to our content script
+            chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+                chrome.tabs.sendMessage(tabs[0].id, data, function(response) {
+                    console.log(response);
+                });
+            });
+        });
 }
 
-// this block updates the menu u get when u right click on chrome
 chrome.contextMenus.create({
-    id: "CONTEXT_MENU",
+    id: CONTEXT_MENU_ID,
     title: "Wordsmith search",
-    contexts: ["selection"],
+    contexts: ["selection"]
 });
 
-chrome.contextMenus.onClicked.addListener(console.log);
+chrome.contextMenus.onClicked.addListener(function(info, tab) {
+    if (info.menuItemId === CONTEXT_MENU_ID) {
+        getData(info.selectionText);
+    }
+});

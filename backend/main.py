@@ -39,7 +39,6 @@ def read_pron(soup):
 def read_def(soup):
     try:
         definitions = [] # Words will have multiple definitions
-        w_type = soup.find("span", class_ = "luna-pos").text[0:-1] #Type (noun, verb, adjv, etc)
         def_results = soup.find("div", class_ = "css-10n3ydx e1hk9ate0")
         def_section = def_results.find_all("div")
         count = 1
