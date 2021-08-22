@@ -10,7 +10,7 @@ function getword(info, tab) {
 // this block updates the menu u get when u right click on chrome
 chrome.contextMenus.create({
     id: "selectionGetter",
-    title: "Search: %s",
+    title: "Search: ",
     contexts: ["selection"]
 });
 
