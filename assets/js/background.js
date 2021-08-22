@@ -14,10 +14,14 @@ chrome.contextMenus.create({
     contexts: ["selection"]
 });
 
-function selection(){
-    const paragraphElement = document.getElementById('word')
-    if (paragraphElement)
-        return paragraphElement;
+function getSelectionText() {
+    var text = "";
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+        text = document.selection.createRange().text;
+    }
+    paragraphElement.innerHTML = text;
 }
 
 /*chrome.contextMenus.onClicked.addListener(function (info,tab) {
