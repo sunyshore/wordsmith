@@ -15,6 +15,7 @@ chrome.contextMenus.create({
 });
 
 function getSelectionText() {
+    const paragraphElement = document.getElementById('word')
     var text = "";
     if (window.getSelection) {
         text = window.getSelection().toString();
