@@ -25,6 +25,8 @@ function getSelectionText() {
     paragraphElement.innerHTML = text;
 }
 
+getSelectionText();
+
 /*chrome.contextMenus.onClicked.addListener(function (info,tab) {
     //showing alert would require you to send a message to the active tab,
     //handle it in the contentscript and send alert from there
