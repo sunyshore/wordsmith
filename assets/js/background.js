@@ -10,11 +10,16 @@
 // this block updates the menu u get when u right click on chrome
 chrome.contextMenus.create({
     id: "selectionGetter",
-    title: "Wordsmith search",
+    title: "Wordsmith search"+ selection(),
     contexts: ["selection"]
 });
 
-chrome.contextMenus.onClicked.addListener(function (info,tab) {
+function selection(){
+    if (window.getSelection)
+        return window.getSelection();
+}
+
+/*chrome.contextMenus.onClicked.addListener(function (info,tab) {
     //showing alert would require you to send a message to the active tab,
     //handle it in the contentscript and send alert from there
   
@@ -22,4 +27,4 @@ chrome.contextMenus.onClicked.addListener(function (info,tab) {
     new Notification('My extension',{
       body : 'you selected: '+jquery.getJson(),
     });
-  });
+  });*/
