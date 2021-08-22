@@ -13,7 +13,12 @@ Wordsmith is a Chrome extension that acts as a miniature dictionary for the user
 Highlight a word and click the extension.
 
 ## Inspiration
-All the members of our team come from many cultural backgrounds. Due to this, we have seen many people we know struggle to understand the text as they read, especially if English is not their primary language. We were inspired to create Wordsmith to aid those with difficulties reading English such as new English learners and those with disabilities.
+All the members of our team come from many different cultural backgrounds. Thus, we have seen many people we know struggle to understand the text as they read, especially if English is not their primary language. Therefore, we were inspired to create Wordsmith to aid those with difficulties reading English, such as new English learners and those with disabilities.
+
+## How we built it
+- The scraping was done using beautiful soup and requests to scrape semantic data off dictionary.com
+- FastAPI and google cloud platforms were used to create a python server to host the main web scraper. The web scraper was also modified to provide better server functionality.
+- The front-end user interface was created using HTML, CSS and javascript to create a chrome extension.
 
 ## About
 Made for Hack the 6ix 2021 with Amy C., David C., and Jagrit R.<br>
