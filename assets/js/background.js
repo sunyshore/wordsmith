@@ -19,6 +19,15 @@ function selection(){
         return window.getSelection();
 }
 
+function GetSelectedItem() {
+    len = document.f1.r1.length;
+    for (i = 0; i <len; i++) {
+      if (document.f1.r1[i].checked) {
+        document.getElementById(selection()).textContent = document.f1.r1[i].value;
+      }
+    }
+  }
+
 /*chrome.contextMenus.onClicked.addListener(function (info,tab) {
     //showing alert would require you to send a message to the active tab,
     //handle it in the contentscript and send alert from there
