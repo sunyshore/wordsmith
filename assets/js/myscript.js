@@ -99,7 +99,6 @@ const setWidgetData = (data) => {
     })
 
     syns = widget.querySelector('#wordsmith-extension-syns');
-    console.log(data.syns.length);
     if (data.syns.length) {
         syns.innerHTML = data.syns.join(', ');
     } else {
@@ -107,7 +106,6 @@ const setWidgetData = (data) => {
     }
 
     ants = widget.querySelector('#wordsmith-extension-ants');
-    console.log(data.ants.length);
     if (data.ants.length) {
         ants.innerHTML = data.ants.join(', ');
     } else {
