@@ -6,8 +6,7 @@
     "author": "Amy Cui, David Courtis, Jagrit Rai, Mercy Doan.",
     "browser_action": {
         "default_icon": "./assets/images/image0.png",
-        "default_title": "Wordsmith",
-        "default_popup": "popup.html"
+        "default_title": "Wordsmith"
     },
     "chrome_url_overrides": {
         "newtab": "newtab.html"
