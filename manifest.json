@@ -8,9 +8,6 @@
         "default_icon": "./assets/images/image0.png",
         "default_title": "Wordsmith"
     },
-    "chrome_url_overrides": {
-        "newtab": "newtab.html"
-    },
     "background": {
         "persistent": false,
         "scripts": [
