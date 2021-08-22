@@ -15,8 +15,9 @@ chrome.contextMenus.create({
 });
 
 function selection(){
-    if (window.getSelection)
-        return window.getSelection();
+    const paragraphElement = document.getElementById('word')
+    if (paragraphElement)
+        return paragraphElement;
 }
 
 /*chrome.contextMenus.onClicked.addListener(function (info,tab) {
