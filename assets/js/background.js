@@ -1,4 +1,4 @@
-/*function getword(info, tab) {
+function getword(info, tab) {
     fetch('http://wordsmith.qc24.xyz/?word=death') // ask lukas how this works
         .then(response => response.json())
         .then(data => console.log(data));
@@ -6,28 +6,13 @@
     chrome.tabs.create({  // shouldn't make a new tab
         url: "http://wordsmith.qc24.xyz/?word=" + info.selectionText
     });
-}*/
+}
+
 // this block updates the menu u get when u right click on chrome
 chrome.contextMenus.create({
-    id: "selectionGetter",
+    id: "CONTEXT_MENU",
     title: "Wordsmith search",
-    contexts: ["selection"]
+    contexts: ["selection"],
 });
 
-/*
-selection stuf??? doesnt work:
-    const paragraphElement = document.getElementById('word')
-    var text = "";
-    if (window.getSelection) {
-        text = window.getSelection().toString();
-    } else if (document.selection && document.selection.type != "Control") {
-        text = document.selection.createRange().text;
-    }
-    paragraphElement.innerHTML = text;
-*/
-
-chrome.tabs.executeScript( {
-    code: "window.getSelection().toString();"
-  }, function(selection) {
-    document.getElementById("word").value = selection[0];
-  });
+chrome.contextMenus.onClicked.addListener(console.log);
