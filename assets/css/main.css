@@ -1,18 +1,30 @@
-body {
+#wordsmith-extension-widget {
     background-color: white;
     padding: 10px;
-  }
-  
-  p {
+    filter: drop-shadow(0 0 10px black);
+    color: black;
+    max-width: 50%;
+}
+
+#wordsmith-extension-widget p {
     text-align: left;
     margin: 0;
-  }
-  
-  a:link, a:visited {
+}
+
+#wordsmith-extension-widget a:link,
+#wordsmith-extension-widget a:visited {
     color: orange;
-  }
-  
-  a:hover, a:active {
+}
+
+#wordsmith-extension-widget a:hover,
+#wordsmith-extension-widget a:active {
     color: crimson;
-  }
-  
+}
+
+#wordsmith-extension-widget ol li {
+    list-style: inside decimal;
+}
+
+#wordsmith-extension-widget ul li {
+    list-style: inside disc;
+}
