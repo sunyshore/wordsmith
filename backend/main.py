@@ -39,16 +39,14 @@ def read_pron(soup):
 def read_def(soup):
     try:
         definitions = [] # Words will have multiple definitions
-        def_results = soup.find("div", class_ = "css-10n3ydx e1hk9ate0")
-        def_section = def_results.find_all("div")
-        count = 1
+    
+        def_section = soup.find_all("div", class_ = "css-10n3ydx e1hk9ate0")
         for d in def_section:
-            #definitions.append(str(count) + d.text)
-            definitions.append(str(count) +". " + d.text)
-            count = count+1
+            de=d.find("span",class_="one-click-content css-nnyc96 e1q3nk1v1").text
+            definitions.append(de)
         return definitions
     except:
-        return("Could not find any definitions.")
+        return[]
 
 def read_synonyms(soup):
     try:
