@@ -10,7 +10,7 @@
 // this block updates the menu u get when u right click on chrome
 chrome.contextMenus.create({
     id: "selectionGetter",
-    title: "Search for word",
+    title: "Wordsmith search",
     contexts: ["selection"]
 });
 
@@ -20,6 +20,6 @@ chrome.contextMenus.onClicked.addListener(function (info,tab) {
   
     //alternate lazy usage example:
     new Notification('My extension',{
-      body : 'you selected: '+info.selectionText,
+      body : 'you selected: '+jquery.getJson(),
     });
   });
