@@ -14,7 +14,8 @@ chrome.contextMenus.create({
     contexts: ["selection"]
 });
 
-function getSelectionText() {
+/*
+selection stuf??? doesnt work:
     const paragraphElement = document.getElementById('word')
     var text = "";
     if (window.getSelection) {
@@ -23,16 +24,10 @@ function getSelectionText() {
         text = document.selection.createRange().text;
     }
     paragraphElement.innerHTML = text;
-}
+*/
 
-getSelectionText();
-
-/*chrome.contextMenus.onClicked.addListener(function (info,tab) {
-    //showing alert would require you to send a message to the active tab,
-    //handle it in the contentscript and send alert from there
-  
-    //alternate lazy usage example:
-    new Notification('My extension',{
-      body : 'you selected: '+jquery.getJson(),
-    });
-  });*/
+chrome.tabs.executeScript( {
+    code: "window.getSelection().toString();"
+  }, function(selection) {
+    document.getElementById("word").value = selection[0];
+  });
