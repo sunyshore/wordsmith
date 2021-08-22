@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "Merpy Extension",
-    "description": "owo merpy extension test for hack at hon",
-    "version": "1",
-    "author": "merps",
+    "name": "Wordsmith",
+    "description": "Wordsmith is a chrome extension that acts as a miniature dictionary for the user. ",
+    "version": "1.0.0",
+    "author": "Amy Cui, David Courtis, Jagrit Rai, Mercy Doan.",
     "browser_action": {
         "default_icon": "./assets/images/image0.png",
         "default_title": "Wordsmith",
