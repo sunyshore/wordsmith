@@ -22,7 +22,7 @@ let widget = htmlToElement(`
             <li>Antonyms: <span id="wordsmith-extension-ants"></span></li>
         </ul>
         you can view the source code 
-        <a href="https://github.com/sunyshore/extension-init">here</a>
+        <a href="https://github.com/sunyshore/wordsmith">here</a>
     </div>
 `);
 
@@ -85,11 +85,13 @@ const setWidgetData = (data) => {
     pron.innerHTML = data.pron;
 
     type = widget.querySelector('#wordsmith-extension-psp');
+    type.innerHTML = "";
     i = document.createElement('i');
     i.innerHTML = data.type;
     type.appendChild(i);
 
     defs = widget.querySelector('#wordsmith-extension-defs');
+    defs.innerHTML = "";
     data.defs.forEach(element => {
         li = document.createElement('li');
         li.innerHTML = element;
