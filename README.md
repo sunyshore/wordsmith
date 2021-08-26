@@ -13,7 +13,7 @@ Wordsmith is a Chrome extension that acts as a miniature dictionary for the user
 All the members of our team come from many different cultural backgrounds. Thus, we have seen many people we know struggle to understand the text as they read, especially if English is not their primary language. Therefore, we were inspired to create Wordsmith to aid those with difficulties reading English, such as new English learners and those with disabilities.
 
 ## How we built it
-- The scraping was done using beautiful soup and requests to scrape semantic data off dictionary.com
+- The scraping was done using Beautiful Soup and requests to scrape semantic data off dictionary.com
 - FastAPI and Google Cloud platforms were used to create a Python server to host the main web scraper. The web scraper was also modified to provide better server functionality.
 - The front-end user interface was created using HTML, CSS, and JavaScript to create a Chrome extension.
 
@@ -23,13 +23,15 @@ Our team had no knowledge of scraping, server building, creating extensions and 
 * __Amy:__ I aided Mercy is developing the User Interface portion of our project. I also designed the initial look of the interface as well as created the video demo for the project.
 * __David:__ I helped on the backend and frontend. I hosted the backend on the a Google Cloud server using FastAPI. First time doing backend and server stuff.
 * __Jagrit:__ I worked on the backend of the extension. I coded the web scraping functionality using the requests and Beautiful Soup Python libraries to scrape semantic data about words. I also lended my voice to our submission video!
-* __Mercy:__ I created the interface using HTML and CSS, and coded most of the extension part of the project. I used .json files and Bootstrap for the first time.<br>
+* __Mercy:__ I created the interface using HTML and CSS, and coded most of the extension part of the project. I used .json files and Bootstrap for the first time.
+
 We'd like to thank Lukas B. and a Hack the 6ix mentor, Henry, for their guidance.
 
-## Demo Video
+## Media
 <div align="center">
   <a href="https://www.youtube.com/watch?v=jBviT8Y25p4"><img src="https://img.youtube.com/vi/jBviT8Y25p4/0.jpg" alt="Wordsmith Video Demo"></a>
 </div>
+Click above to see a demo video of our project!
 
-## DevPost
 [![Wordsmith Icon](/assets/images/image0.png "Wordsmith Icon")](https://devpost.com/software/deez-nuts-o4nbtd)
+Click above to view our Devpost page.
