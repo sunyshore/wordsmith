@@ -17,9 +17,20 @@ All the members of our team come from many different cultural backgrounds. Thus,
 
 ## How we built it
 - The scraping was done using beautiful soup and requests to scrape semantic data off dictionary.com
-- FastAPI and google cloud platforms were used to create a python server to host the main web scraper. The web scraper was also modified to provide better server functionality.
-- The front-end user interface was created using HTML, CSS and javascript to create a chrome extension.
+- FastAPI and Google Cloud platforms were used to create a Python server to host the main web scraper. The web scraper was also modified to provide better server functionality.
+- The front-end user interface was created using HTML, CSS and JavaScript to create a Chrome extension.
 
 ## About
-Made for Hack the 6ix 2021 with Amy C., David C., and Jagrit R.<br>
-We'd like to thank Lukas B. and another Henry from the Hack the 6ix team for their assistance.
+Made for Hack the 6ix 2021 with Amy C., David C., and Jagrit R. Our team had no knowledge of scraping, server building, creating extensions and user interfaces prior to the hackathon. In the span of approximately 24 hours, we had learned everything needed to create our project.
+* __Amy:__ I aided Mercy is developing the User Interface portion of our project. I also designed the initial look of the interface as well as created the video demo for the project.
+* __David:__ I helped on the backend and frontend. I hosted the backend on the a google cloud server using fast api. First time doing backend and server stuff.
+* __Jagrit:__ I worked on the backend of the extension. I coded the web scraping functionality using the requests and beautiful soup python libraries to scrape semantic data about words. I also lended my voice to our submission video!
+* __Mercy:__ I created the interface using HTML and CSS, and coded most of the extension part of the project. I used .json files and Bootstrap for the first time.
+We'd like to thank Lukas B. and Henry from the Hack the 6ix team for their guidance.
+
+## Demo Video
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=jBviT8Y25p4"><img src="https://img.youtube.com/vi/jBviT8Y25p4/0.jpg" alt="Wordsmith Video Demo"></a>
+</div>
+
+![Wordsmith Icon](/assets/images/image0.png "Wordsmith Icon")
